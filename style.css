@@ -40,7 +40,7 @@ h1{
     color: hsl(0, 0%, 100%);
     font-size: 1.4rem;
 }
-h1::before{
+.starbefore::before{
     display: block;
     content: url(images/icon-star.svg);
     width: 2.5rem;
