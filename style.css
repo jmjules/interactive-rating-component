@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root {
+    --orange: hsl(25, 97%, 53%);
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    background: hsl(216, 12%, 8%);
+    font-family: 'Overpass', sans-serif;
+
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    width: 20rem;
+    background:-webkit-radial-gradient(circle farthest-side at top center, #252d37 0%, #171e28 86%);
+    background:-o-radial-gradient(circle farthest-side at top center, #252d37 0%, #171e28 86%);
+    background:-moz-radial-gradient(circle farthest-side at top center, #252d37 0%, #171e28 86%);
+    background:radial-gradient(circle farthest-side at top center, #252d37 0%, #171e28 86%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+h1{
+    margin-bottom: 0;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.4rem;
+}
+h1::before{
+    display: block;
+    content: url(images/icon-star.svg);
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2em;
+    background: hsl(213, 19%, 18%);
+    border-radius: 50%;
+    margin-bottom: 2rem;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    color: hsl(217, 12%, 63%);
+    font-size: 15px;
+}
+
+button{
+    margin-top: 1rem;
+    border: none;
+    padding: .7rem;
+    color: white;
+    text-transform: uppercase;
+    background: hsl(25, 97%, 53%);
+    border-radius: 1rem;
+    letter-spacing: .1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+form{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+label{
+    color: hsl(217, 12%, 63%);
+    background: hsl(213, 19%, 18%);
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: grid;
+    place-content: center;
+}
+label:has(input:checked) {
+    color: white;
+    background: hsl(216, 12%, 54%);
+}
+label:hover,
+label:has(input:checked):hover{
+    color: white;
+    background: var(--orange);
+}
+
+input[type="radio"]{
+    appearance: none;
+    margin: 0;
+    position: absolute;
+}
+
+
