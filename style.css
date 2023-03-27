@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 :root {
     --orange: hsl(25, 97%, 53%);
-  }
+}
 
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-  }
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+}
+
+h1, h2, h3, p{
+    margin: 0;
+    padding: 0;
+}
+
+
 
 body{
     margin: 0;
@@ -22,52 +29,48 @@ body{
 }
 
 main{
-    width: 20rem;
+    max-width: 26rem;
+    aspect-ratio: 1;
     background:-webkit-radial-gradient(circle farthest-side at top center, #252d37 0%, #171e28 86%);
     background:-o-radial-gradient(circle farthest-side at top center, #252d37 0%, #171e28 86%);
     background:-moz-radial-gradient(circle farthest-side at top center, #252d37 0%, #171e28 86%);
     background:radial-gradient(circle farthest-side at top center, #252d37 0%, #171e28 86%);
-    border-radius: 1rem;
-    padding: 1.5rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    padding-right: 2.6rem;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    align-content: space-between;
 }
 
 
 h1{
     margin-bottom: 0;
     color: hsl(0, 0%, 100%);
-    font-size: 1.4rem;
+    font-size: 1.75rem;
 }
-.starbefore::before{
-    display: block;
-    content: url(images/icon-star.svg);
-    width: 2.5rem;
-    height: 2.5rem;
-    line-height: 2em;
-    background: hsl(213, 19%, 18%);
-    border-radius: 50%;
-    margin-bottom: 2rem;
 
-    display: grid;
-    align-items: center;
-    justify-content: center;
+.rating-star{
+    background: hsl(213, 19%, 18%);
+    padding: 1rem;
+    border-radius: 50%;
 }
+
 p{
     color: hsl(217, 12%, 63%);
     font-size: 15px;
+    margin-top: 1.125rem;
 }
 
 button{
     margin-top: 1rem;
     border: none;
-    padding: .7rem;
+    padding: 1rem;
     color: white;
     text-transform: uppercase;
     background: hsl(25, 97%, 53%);
-    border-radius: 1rem;
-    letter-spacing: .1rem;
+    border-radius: 100vmax;
+    letter-spacing: .2rem;
     font-weight: 700;
     cursor: pointer;
 }
@@ -76,13 +79,13 @@ button{
 
 form{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 label{
     color: hsl(217, 12%, 63%);
     background: hsl(213, 19%, 18%);
-    width: 3rem;
+    width: 3.25rem;
     aspect-ratio: 1;
     border-radius: 50%;
     cursor: pointer;
@@ -106,4 +109,62 @@ input[type="radio"]{
     position: absolute;
 }
 
+.centeredPic{
+    justify-self: center;
+    max-height: 100%;
+    /* height: 100%; */
+}
+.centered{
+    /* margin-top: .5rem; */
+    text-align: center;
+}
 
+.rated{
+    color: hsl(25, 97%, 53%);
+    background: hsl(213, 19%, 18%);
+    border-radius: 1rem;
+    padding: .4rem 1.5rem;
+    vertical-align:middle;
+
+    max-width: fit-content;
+    justify-self: center;
+}
+
+
+.main-block{
+    padding-block: 3rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    main{
+        width: 93%;
+        height: 22rem;
+        justify-self: center;
+        border-radius: 1rem;
+
+        padding: 1.5rem;
+    }
+
+    .rating-star{
+        padding: .75rem;
+    }
+
+    h1{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: 0.875rem;
+    }
+
+
+    label{
+        width: 2.5rem;
+    }
+
+    button{
+        letter-spacing: .15rem;
+    }
+}
